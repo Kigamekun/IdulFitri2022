@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <meta name="description"
-        content="Happy Eid Mubarak dari Keluarga Besar Syahrullah Harits">
-    <meta name="keywords"
-        content="ramadhan, lebaran, idul fitri, hari raya, mohon maaf">
+    <meta name="description" content="Happy Eid Mubarak dari Keluarga Besar Syahrullah Harits">
+    <meta name="keywords" content="ramadhan, lebaran, idul fitri, hari raya, mohon maaf">
     <meta name="author" content="Kiga Ame">
     <meta property="og:title" content="Happy Eid Mubarak" />
-    <meta property="og:image" itemprop="image" content="https://kigamekun.github.io/IdulFitri2022/assets/family_remove.png" />
-    <meta property="og:image:url" itemprop="image" content="https://kigamekun.github.io/IdulFitri2022/assets/family_remove.png" />
+    <meta property="og:image" itemprop="image"
+        content="https://kigamekun.github.io/IdulFitri2022/assets/family_remove.png" />
+    <meta property="og:image:url" itemprop="image"
+        content="https://kigamekun.github.io/IdulFitri2022/assets/family_remove.png" />
     <meta property="og:image:type" content="image/png" />
 
     <meta property="og:type" content="website" />
@@ -360,6 +360,84 @@
             font: bold 2em/1.6 "Diwani Letter";
             color: #ff9b00;
         }
+
+        #tidak {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        /* CSS */
+        .button-85 {
+            padding: 0.6em 2em;
+            border: none;
+            outline: none;
+            color: rgb(255, 255, 255);
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-85:before {
+            content: "";
+            background: linear-gradient(45deg,
+                    #ff0000,
+                    #ff7300,
+                    #fffb00,
+                    #48ff00,
+                    #00ffd5,
+                    #002bff,
+                    #7a00ff,
+                    #ff00c8,
+                    #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing-button-85 20s linear infinite;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        @keyframes glowing-button-85 {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .button-85:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #222;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
     </style>
 
     <!-- setup our canvas element -->
@@ -368,7 +446,7 @@
         <source src="assets/takbir.mp3">
     </audio>
 
-   
+
     <center>
         <img src="assets/family_remove.png" alt="">
         <div>
@@ -377,17 +455,27 @@
             <br>
             <!-- Set up your HTML -->
             <div class="owl-carousel" style="color:white;">
-         
-                <div>Keluarga Besar Syahrullah Harits Mengucapkan Selamat Hari Raya Idul Fitri  1 Syawal 1443 🙏🏿🙏🏻🙏</div>
+
+                <div>Keluarga Besar Syahrullah Harits Mengucapkan Selamat Hari Raya Idul Fitri 1 Syawal 1443 🙏🏿🙏🏻🙏
+                </div>
                 <div>Mohon Maaf Lahir Batin</div>
                 <div>Mohon maaf bila ada kesalahan yang terucap yang disengaja maupun tidak disengaja</div>
                 <div>Mudah mudahan dipertemukan dengan ramadhan selanjutnya.</div>
-              
+
             </div>
             <br>
-          
+            <div style="width: 100%;height: 220px;position: relative;" id="container-button">
+                <h3>Maafin dong ???</h3>
+                <br>
+                <button id="iya" class="button-85">Iyaa dimaafin kok</button>
+                <br>
+                <br>
+                <button class="button-85" id="tidak">Ngga mau ah</button>
+            </div>
         </div>
     </center>
+
+
 
 
 
@@ -397,6 +485,44 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
     integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    $('#iya').click(function () {
+        Swal.fire({
+            title: 'Terimakasihhhhhh !',
+            width: 600,
+            padding: '3em',
+            color: '#716add',
+            background: '#fff',
+            backdrop: `
+    rgba(0,0,123,0.4)
+    url("/assets/nyan_cat.gif")
+    left top
+    no-repeat
+  `
+        })
+    });
+</script>
+<script>
+
+
+    const c = document.querySelector("#container-button");
+    const b = document.querySelector("#tidak");
+
+    function change() {
+        const
+            { width: cWidth, height: cHeight } = c.getBoundingClientRect(),
+            { width: bWidth, height: bHeight } = b.getBoundingClientRect(),
+            i = Math.floor(Math.random() * (cWidth - bWidth)) + 1,
+            j = Math.floor(Math.random() * (cHeight - bHeight)) + 1;
+
+        b.style.left = i + "px";
+        b.style.top = j + "px";
+    }
+
+    b.addEventListener("click", change);
+</script>
 <script>
     var owl = $('.owl-carousel');
     owl.owlCarousel({
