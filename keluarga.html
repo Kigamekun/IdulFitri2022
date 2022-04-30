@@ -372,72 +372,62 @@
 
         }
 
-        /* CSS */
-        .button-85 {
-            padding: 0.6em 2em;
-            border: none;
-            outline: none;
-            color: rgb(255, 255, 255);
-            background: #111;
+       /* CSS */
+       .button-4 {
+            appearance: none;
+            background-color: #FAFBFC;
+            border: 1px solid rgba(27, 31, 35, 0.15);
+            border-radius: 6px;
+            box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+            box-sizing: border-box;
+            color: #24292E;
             cursor: pointer;
+            display: inline-block;
+            font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            list-style: none;
+            padding: 6px 16px;
             position: relative;
-            z-index: 0;
-            border-radius: 10px;
+            transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
             user-select: none;
             -webkit-user-select: none;
             touch-action: manipulation;
+            vertical-align: middle;
+            white-space: nowrap;
+            word-wrap: break-word;
         }
 
-        .button-85:before {
-            content: "";
-            background: linear-gradient(45deg,
-                    #ff0000,
-                    #ff7300,
-                    #fffb00,
-                    #48ff00,
-                    #00ffd5,
-                    #002bff,
-                    #7a00ff,
-                    #ff00c8,
-                    #ff0000);
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            background-size: 400%;
-            z-index: -1;
-            filter: blur(5px);
-            -webkit-filter: blur(5px);
-            width: calc(100% + 4px);
-            height: calc(100% + 4px);
-            animation: glowing-button-85 20s linear infinite;
-            transition: opacity 0.3s ease-in-out;
-            border-radius: 10px;
+        .button-4:hover {
+            background-color: #F3F4F6;
+            text-decoration: none;
+            transition-duration: 0.1s;
         }
 
-        @keyframes glowing-button-85 {
-            0% {
-                background-position: 0 0;
-            }
-
-            50% {
-                background-position: 400% 0;
-            }
-
-            100% {
-                background-position: 0 0;
-            }
+        .button-4:disabled {
+            background-color: #FAFBFC;
+            border-color: rgba(27, 31, 35, 0.15);
+            color: #959DA5;
+            cursor: default;
         }
 
-        .button-85:after {
-            z-index: -1;
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: #222;
-            left: 0;
-            top: 0;
-            border-radius: 10px;
+        .button-4:active {
+            background-color: #EDEFF2;
+            box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+            transition: none 0s;
+        }
+
+        .button-4:focus {
+            outline: 1px transparent;
+        }
+
+        .button-4:before {
+            display: none;
+        }
+
+        .button-4:-webkit-details-marker {
+            display: none;
         }
     </style>
 
@@ -468,10 +458,10 @@
             <div style="width: 100%;height: 220px;position: relative;" id="container-button">
                 <h3 style="color: white;">Maafin dong ???</h3>
                 <br>
-                <button id="iya" class="button-85">Iyaa dimaafin kok</button>
+                <button id="iya" class="button-4">Iyaa dimaafin kok</button>
                 <br>
                 <br>
-                <button class="button-85" id="tidak">Ngga mau ah</button>
+                <button class="button-4" id="tidak">Ngga mau ah</button>
             </div>
         </div>
     </center>

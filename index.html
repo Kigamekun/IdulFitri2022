@@ -9,14 +9,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <meta name="description"
-        content="Happy eid Mubarak kawand kawand.">
-    <meta name="keywords"
-        content="ramadhan, lebaran, idul fitri, hari raya, mohon maaf">
+    <meta name="description" content="Happy eid Mubarak kawand kawand.">
+    <meta name="keywords" content="ramadhan, lebaran, idul fitri, hari raya, mohon maaf">
     <meta name="author" content="Kiga Ame">
     <meta property="og:title" content="Happy Eid Mubarak" />
     <meta property="og:image" itemprop="image" content="https://kigamekun.github.io/IdulFitri2022/assets/vect.png" />
-    <meta property="og:image:url" itemprop="image" content="https://kigamekun.github.io/IdulFitri2022/assets/vect.png" />
+    <meta property="og:image:url" itemprop="image"
+        content="https://kigamekun.github.io/IdulFitri2022/assets/vect.png" />
     <meta property="og:image:type" content="image/png" />
 
     <meta property="og:type" content="website" />
@@ -349,7 +348,7 @@
             text-align: center;
             position: relative;
             bottom: 20px;
-            font: bold 3em/1.6 "Diwani Letter";
+            font: bold 1.4em/1.6 "Diwani Letter";
             color: #ff9b00;
         }
 
@@ -357,8 +356,76 @@
             text-align: center;
             position: relative;
             bottom: 20px;
-            font: bold 2em/1.6 "Diwani Letter";
+            font: bold 1em/1.6 "Diwani Letter";
             color: #ff9b00;
+        }
+
+        #tidak {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        /* CSS */
+        .button-4 {
+            appearance: none;
+            background-color: #FAFBFC;
+            border: 1px solid rgba(27, 31, 35, 0.15);
+            border-radius: 6px;
+            box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+            box-sizing: border-box;
+            color: #24292E;
+            cursor: pointer;
+            display: inline-block;
+            font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            list-style: none;
+            padding: 6px 16px;
+            position: relative;
+            transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: middle;
+            white-space: nowrap;
+            word-wrap: break-word;
+        }
+
+        .button-4:hover {
+            background-color: #F3F4F6;
+            text-decoration: none;
+            transition-duration: 0.1s;
+        }
+
+        .button-4:disabled {
+            background-color: #FAFBFC;
+            border-color: rgba(27, 31, 35, 0.15);
+            color: #959DA5;
+            cursor: default;
+        }
+
+        .button-4:active {
+            background-color: #EDEFF2;
+            box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+            transition: none 0s;
+        }
+
+        .button-4:focus {
+            outline: 1px transparent;
+        }
+
+        .button-4:before {
+            display: none;
+        }
+
+        .button-4:-webkit-details-marker {
+            display: none;
         }
     </style>
 
@@ -418,9 +485,18 @@
                 <div>Mohon Maaf Lahir dan Batin, Kalau ada salah maafin ya, kalau engga ada salahin aja gapapa</div>
                 <div>Lo Semua W Maafin kok , kecuali user franco</div>
             </div>
+
+            <div style="width: 100%;height: 100px;position: relative;" id="container-button">
+                <h3 style="color: white;margin-bottom: 5px;">Maafin dong ???</h3>
+
+                <button id="iya" class="button-4" style="margin-bottom: 2px;">Iyaa</button>
+
+                <button class="button-4" id="tidak">Ngga</button>
+            </div>
             <br>
-            <h5 style="color: #ff9b00;">Yang cwe gak usah minta maaf soalnya gapernah salah 👌🏻</h5>
+            <h6 style="color: #ff9b00;">Yang cwe gak usah minta maaf soalnya gapernah salah 👌🏻</h6>
         </div>
+
     </center>
 
 
@@ -431,6 +507,45 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
     integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    $('#iya').click(function () {
+        Swal.fire({
+            title: 'Makasih !',
+            width: 600,
+            padding: '3em',
+            color: '#716add',
+            background: '#fff',
+            backdrop: `
+    rgba(0,0,123,0.4)
+    url("/assets/nyan_cat.gif")
+    left top
+    no-repeat
+  `
+        })
+    });
+</script>
+<script>
+
+
+    const c = document.querySelector("#container-button");
+    const b = document.querySelector("#tidak");
+
+    function change() {
+        console.log('change');
+        const
+            { width: cWidth, height: cHeight } = c.getBoundingClientRect(),
+            { width: bWidth, height: bHeight } = b.getBoundingClientRect(),
+            i = Math.floor(Math.random() * (cWidth - bWidth)) + 1,
+            j = Math.floor(Math.random() * (cHeight - bHeight)) + 1;
+
+        b.style.left = i + "px";
+        b.style.top = j + "px";
+    }
+
+    b.addEventListener("click", change);
+</script>
 <script>
     var owl = $('.owl-carousel');
     owl.owlCarousel({
