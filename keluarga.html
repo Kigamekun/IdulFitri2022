@@ -433,7 +433,7 @@
 
     <!-- setup our canvas element -->
     <canvas id="canvas" style="position: absolute;"></canvas>
-    <audio autoplay loop>
+    <audio id="aud" autoplay loop>
         <source src="assets/takbir.mp3">
     </audio>
 
@@ -447,7 +447,8 @@
             <!-- Set up your HTML -->
             <div class="owl-carousel" style="color:white;">
 
-                <div>Keluarga Besar Syahrullah Harits & Awit Retno U Mengucapkan Selamat Hari Raya Idul Fitri 1 Syawal 1443 🙏🏿🙏🏻🙏
+                <div>Keluarga Besar Syahrullah Harits & Awit Retno U Mengucapkan Selamat Hari Raya Idul Fitri 1 Syawal
+                    1443 🙏🏿🙏🏻🙏
                 </div>
                 <div>Mohon Maaf Lahir Batin</div>
                 <div>Mohon maaf bila ada kesalahan yang terucap yang disengaja maupun tidak disengaja</div>
@@ -479,6 +480,18 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
+
+    const audioContext = new AudioContext();
+    const element = document.querySelector('#aud');
+    const source = audioContext.createMediaElementSource(element);
+    source.connect(audioContext.destination)
+    audio.play();
+
+
+    const music = new Audio('assets/takbir.mp3');
+    music.play();
+
+
     $('#iya').click(function () {
         Swal.fire({
             title: 'Alhamdullilah 🤲🏻',
