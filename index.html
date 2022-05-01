@@ -513,18 +513,26 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-
 <script>
     function play() {
         var audio = document.getElementById("aud");
         audio.play();
     }
-</script>(
+</script>
 
 <script>
     $('#playlist').click();
 </script>
 
+<script>
+    document.body.addEventListener("click", function (evt) {
+        $('#playlist').click();
+    });
+
+    $("body").scroll(function () {
+        $('#playlist').click();
+    });
+</script>
 <script>
     $('#iya').click(function () {
         Swal.fire({

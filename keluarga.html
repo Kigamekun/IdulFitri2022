@@ -433,10 +433,10 @@
 
     <!-- setup our canvas element -->
     <canvas id="canvas" style="position: absolute;"></canvas>
-    <!-- <audio id="aud" autoplay muted loop>
+    <audio id="aud" autoplay loop>
         <source src="assets/takbir.mp3">
-    </audio> -->
-    <iframe src="assets/takbir.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+    </audio>
+    <!-- <iframe src="assets/takbir.mp3" allow="autoplay" id="audio" style="display: none"></iframe> -->
 
     <center>
         <img style="width: 100%;height: 100%;" src="assets/family_remove.png" alt="">
@@ -478,27 +478,27 @@
     integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- 
-    <script>
-        function play() {
-            var audio = document.getElementById("aud");
-            audio.play();
-        }
-    </script>
 
-    <script>
+<script>
+    function play() {
+        var audio = document.getElementById("aud");
+        audio.play();
+    }
+</script>
+
+<script>
+    $('#playlist').click();
+</script>
+
+<script>
+    document.body.addEventListener("click", function (evt) {
         $('#playlist').click();
-    </script>
+    });
 
-    <script>
-        document.body.addEventListener("click", function (evt) {
-            $('#playlist').click();
-        });
-
-        $("body").scroll(function () {
-            $('#playlist').click();
-        });
-    </script> -->
+    $("body").scroll(function () {
+        $('#playlist').click();
+    });
+</script>
 <script>
 
 
