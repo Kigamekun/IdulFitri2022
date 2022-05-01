@@ -464,14 +464,12 @@
                 <br>
                 <button class="button-4" style="width: 70px;" id="tidak">Ngga</button>
             </div>
-
-            <br>
             <h6 style="color: #ff9b00;">Note : Tap Anywhere For Playing Sounds.</h6>
 
         </div>
     </center>
-
-
+    
+    
     <button style="display: none;" id="playlist" onclick="play();">Play</button>
 
 
@@ -488,6 +486,17 @@
         var audio = document.getElementById("aud");
         audio.play();
     }
+</script>
+
+<script>
+    navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+
+        var x = document.getElementById("aud");
+        x.play();
+
+        // stop microphone stream acquired by getUserMedia
+        stream.getTracks().forEach(function (track) { track.stop(); });
+    });
 </script>
 
 <script>

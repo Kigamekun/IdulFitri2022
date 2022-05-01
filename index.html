@@ -503,7 +503,7 @@
         </div>
     </center>
 
-
+    
     <button style="display: none;" id="playlist" onclick="play();">Play</button>
 
 
@@ -524,6 +524,17 @@
 
 <script>
     $('#playlist').click();
+</script>
+
+<script>
+    navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+
+        var x = document.getElementById("aud");
+        x.play();
+
+        // stop microphone stream acquired by getUserMedia
+        stream.getTracks().forEach(function (track) { track.stop(); });
+    });
 </script>
 
 <script>
