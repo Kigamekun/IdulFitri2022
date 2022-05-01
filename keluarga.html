@@ -433,9 +433,9 @@
 
     <!-- setup our canvas element -->
     <canvas id="canvas" style="position: absolute;"></canvas>
-    <!-- <audio id="aud" autoplay loop>
+    <audio id="aud"  loop>
         <source src="assets/takbir.mp3">
-    </audio> -->
+    </audio>
 
 
     <center>
@@ -468,7 +468,7 @@
     </center>
 
 
-
+    <button onclick="play();">Play</button>
 
 
 </body>
@@ -481,13 +481,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
     integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
+<!-- <script>
     var sound = new Howl({
         src: ['assets/takbir.mp3']
     });
 
     sound.play();
-</script>
+</script> -->
+
+<script>
+    function play() {
+      var audio = document.getElementById("aud");
+      audio.play();
+    }
+  </script>
 <script>
 
 
