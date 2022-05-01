@@ -433,9 +433,9 @@
 
     <!-- setup our canvas element -->
     <canvas id="canvas" style="position: absolute;"></canvas>
-    <audio id="aud" autoplay loop>
+    <!-- <audio id="aud" autoplay loop>
         <source src="assets/takbir.mp3">
-    </audio>
+    </audio> -->
 
 
     <center>
@@ -478,18 +478,17 @@
     integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+    integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
+    var sound = new Howl({
+        src: ['assets/takbir.mp3']
+    });
 
-    const audioContext = new AudioContext();
-    const element = document.querySelector('#aud');
-    const source = audioContext.createMediaElementSource(element);
-    source.connect(audioContext.destination)
-    audio.play();
-
-
-    const music = new Audio('assets/takbir.mp3');
-    music.play();
+    sound.play();
+</script>
+<script>
 
 
     $('#iya').click(function () {
