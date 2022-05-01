@@ -433,7 +433,7 @@
 
     <!-- setup our canvas element -->
     <canvas id="canvas" style="position: absolute;"></canvas>
-    <audio id="aud"  loop>
+    <audio id="aud" loop>
         <source src="assets/takbir.mp3">
     </audio>
 
@@ -468,7 +468,7 @@
     </center>
 
 
-    <button onclick="play();">Play</button>
+    <button style="display: none;" id="playlist" onclick="play();">Play</button>
 
 
 </body>
@@ -478,23 +478,19 @@
     integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
-    integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<!-- <script>
-    var sound = new Howl({
-        src: ['assets/takbir.mp3']
-    });
-
-    sound.play();
-</script> -->
 
 <script>
     function play() {
-      var audio = document.getElementById("aud");
-      audio.play();
+        var audio = document.getElementById("aud");
+        audio.play();
     }
-  </script>
+</script>(
+
+<script>
+    setTimeout(() => {
+        $('#playlist').click();
+    }, 500);
+</script>
 <script>
 
 
@@ -507,9 +503,9 @@
             background: '#fff',
 
         })
-        // setTimeout(() => {
-        //     self.close();
-        // }, 3000);
+        setTimeout(() => {
+            self.close();
+        }, 3000);
     });
 </script>
 <script>

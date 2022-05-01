@@ -431,9 +431,10 @@
 
     <!-- setup our canvas element -->
     <canvas id="canvas"></canvas>
-    <audio autoplay loop>
+    <audio id="aud" loop>
         <source src="assets/takbir.mp3">
     </audio>
+
 
     <div id="work" style="position: absolute;left: 0;right: 0;margin-left: auto;margin-right: auto;">
         <div id="wire"></div>
@@ -493,12 +494,17 @@
 
                 <button class="button-4" id="tidak">Ngga</button>
             </div>
-        <br>
-        <h6 style="color: #ff9b00;">Yang cwe gak usah minta maaf soalnya gapernah salah 👌🏻</h6>
-        <h6 style="color: #ff9b00;">Apalagi yang namanya salwa 😂</h6>
-          
+            <br>
+            <h6 style="color: #ff9b00;">Yang cwe gak usah minta maaf soalnya gapernah salah 👌🏻</h6>
+            <h6 style="color: #ff9b00;">Apalagi yang namanya salwa 😂</h6>
+
         </div>
     </center>
+
+
+    <button style="display: none;" id="playlist" onclick="play();">Play</button>
+
+
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
@@ -506,6 +512,20 @@
     integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+<script>
+    function play() {
+        var audio = document.getElementById("aud");
+        audio.play();
+    }
+</script>(
+
+<script>
+    setTimeout(() => {
+        $('#playlist').click();
+    }, 500);
+</script>
 
 <script>
     $('#iya').click(function () {
